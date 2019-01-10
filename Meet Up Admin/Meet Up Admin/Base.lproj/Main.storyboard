@@ -17,7 +17,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launcher2" translatesAutoresizingMaskIntoConstraints="NO" id="hiE-oD-Cfr">
+                                <rect key="frame" x="105" y="74" width="204" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="hkH-B3-iRQ"/>
+                                    <constraint firstAttribute="width" constant="204" id="k4N-yJ-a6d"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="create" translatesAutoresizingMaskIntoConstraints="NO" id="1N2-T7-GMo">
+                                <rect key="frame" x="44" y="214" width="327" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLv-vJ-Qcf">
+                                <rect key="frame" x="130.66666666666666" y="507" width="152.99999999999997" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="cgu-ar-dUT"/>
+                                    <constraint firstAttribute="width" constant="153" id="crm-A8-4ny"/>
+                                </constraints>
+                                <state key="normal" title="Log Out"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwr-qu-uhv">
+                                <rect key="frame" x="130.66666666666666" y="569" width="152.99999999999997" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9Gz-Mb-eD4"/>
+                                    <constraint firstAttribute="width" constant="153" id="blu-JE-HM6"/>
+                                </constraints>
+                                <state key="normal" title="Log In"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cwr-qu-uhv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SvN-oA-5CE"/>
+                            <constraint firstItem="hiE-oD-Cfr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="XDX-lQ-gvs"/>
+                            <constraint firstItem="hiE-oD-Cfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="csS-Xu-a5U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cwr-qu-uhv" secondAttribute="bottom" constant="74" id="iCD-Mb-9cU"/>
+                            <constraint firstItem="sLv-vJ-Qcf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lf6-bh-92O"/>
+                            <constraint firstItem="Cwr-qu-uhv" firstAttribute="top" secondItem="sLv-vJ-Qcf" secondAttribute="bottom" constant="20" id="pHq-VY-VSK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="et7-H4-Ttp"/>
@@ -25,12 +62,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="134"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="133.69565217391306"/>
+        </scene>
+        <!--My Events-->
+        <scene sceneID="IUS-it-jWh">
+            <objects>
+                <viewController id="JaU-D8-nKu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNi-gw-6qh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7gc-Wc-z9J"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Events" id="vYu-k5-3aP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsB-Zb-l3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1858" y="889"/>
+        </scene>
+        <!--Scan QR-->
+        <scene sceneID="9wo-Ug-t8z">
+            <objects>
+                <viewController id="TEd-Ty-7oA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kz5-um-9j2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3VI-Op-AgO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan QR" id="13G-TI-bzt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuM-kb-YNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="1198"/>
         </scene>
         <!--Create-->
         <scene sceneID="d5u-gB-tuB">
             <objects>
-                <viewController id="qAs-QK-zkP" sceneMemberID="viewController">
+                <viewController id="qAs-QK-zkP" customClass="CreateViewController" customModule="Meet_Up_Admin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="fXV-9g-GK5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +110,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yp-Iq-qiC" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1358"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-Tc-AWX">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-Tc-AWX">
                                                 <rect key="frame" x="78" y="8" width="219" height="47"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="6kZ-73-wnP"/>
@@ -78,7 +147,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-yP-7cx">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peopleBack" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-yP-7cx">
                                                 <rect key="frame" x="49.666666666666657" y="235" width="276" height="182"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="276" id="HLY-yp-D3Z"/>
@@ -361,6 +430,8 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Rjv-Pm-ER2"/>
                         <segue destination="qAs-QK-zkP" kind="relationship" relationship="viewControllers" id="yNc-Ma-hoZ"/>
+                        <segue destination="JaU-D8-nKu" kind="relationship" relationship="viewControllers" id="sFP-Fx-MeM"/>
+                        <segue destination="TEd-Ty-7oA" kind="relationship" relationship="viewControllers" id="kxJ-ni-NKc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fT-xg-gG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -368,4 +439,9 @@
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="create" width="245" height="93"/>
+        <image name="launcher2" width="355" height="123"/>
+        <image name="peopleBack" width="700" height="512"/>
+    </resources>
 </document>
