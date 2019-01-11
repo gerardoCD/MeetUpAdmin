@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5763498121E8EF390023CD03 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763498021E8EF390023CD03 /* MyEventsViewController.swift */; };
+		5763498621E8EFEA0023CD03 /* MyEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763498521E8EFEA0023CD03 /* MyEventsTableViewCell.swift */; };
 		576BFCB721E7D3DF00A35667 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576BFCB621E7D3DF00A35667 /* CreateViewController.swift */; };
 		578BDAAF21E7AB4C004B931B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BDAAE21E7AB4C004B931B /* MainViewController.swift */; };
 		C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D483321E6D259002F0793 /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5763498021E8EF390023CD03 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		5763498521E8EFEA0023CD03 /* MyEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewCell.swift; sourceTree = "<group>"; };
 		576BFCB621E7D3DF00A35667 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		578BDAAE21E7AB4C004B931B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C19D483021E6D259002F0793 /* Meet Up Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet Up Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,11 +80,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5763498221E8EF7A0023CD03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5763498521E8EFEA0023CD03 /* MyEventsTableViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		578BDAAD21E7AB2B004B931B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				578BDAAE21E7AB4C004B931B /* MainViewController.swift */,
 				576BFCB621E7D3DF00A35667 /* CreateViewController.swift */,
+				5763498021E8EF390023CD03 /* MyEventsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,6 +121,7 @@
 		C19D483221E6D259002F0793 /* Meet Up Admin */ = {
 			isa = PBXGroup;
 			children = (
+				5763498221E8EF7A0023CD03 /* Models */,
 				578BDAAD21E7AB2B004B931B /* Controllers */,
 				C19D483321E6D259002F0793 /* AppDelegate.swift */,
 				C19D483721E6D259002F0793 /* Main.storyboard */,
@@ -268,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */,
+				5763498121E8EF390023CD03 /* MyEventsViewController.swift in Sources */,
 				578BDAAF21E7AB4C004B931B /* MainViewController.swift in Sources */,
+				5763498621E8EFEA0023CD03 /* MyEventsTableViewCell.swift in Sources */,
 				576BFCB721E7D3DF00A35667 /* CreateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
