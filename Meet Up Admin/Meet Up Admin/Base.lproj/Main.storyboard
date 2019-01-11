@@ -33,7 +33,7 @@
                                 <rect key="frame" x="130.66666666666666" y="507" width="152.99999999999997" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="cgu-ar-dUT"/>
-                                    <constraint firstAttribute="width" constant="153" id="crm-A8-4ny"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="crm-A8-4ny"/>
                                 </constraints>
                                 <state key="normal" title="Log Out"/>
                             </button>
@@ -41,7 +41,7 @@
                                 <rect key="frame" x="130.66666666666666" y="569" width="152.99999999999997" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9Gz-Mb-eD4"/>
-                                    <constraint firstAttribute="width" constant="153" id="blu-JE-HM6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="blu-JE-HM6"/>
                                 </constraints>
                                 <state key="normal" title="Log In"/>
                             </button>
@@ -57,7 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="et7-H4-Ttp"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="main" id="et7-H4-Ttp"/>
                     <navigationItem key="navigationItem" id="dPc-FO-SW4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +74,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7gc-Wc-z9J"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Events" id="vYu-k5-3aP"/>
+                    <tabBarItem key="tabBarItem" title="My Events" image="list" id="vYu-k5-3aP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsB-Zb-l3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +90,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3VI-Op-AgO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan QR" id="13G-TI-bzt"/>
+                    <tabBarItem key="tabBarItem" title="Scan QR" image="QR" id="13G-TI-bzt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuM-kb-YNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -389,7 +389,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bEk-My-J8v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" id="oCn-NQ-oWb"/>
+                    <tabBarItem key="tabBarItem" title="Create" image="createIcon" id="oCn-NQ-oWb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1350"/>
@@ -440,8 +440,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="QR" width="22.5" height="22.5"/>
         <image name="create" width="245" height="93"/>
+        <image name="createIcon" width="22.5" height="22.5"/>
         <image name="launcher2" width="355" height="123"/>
+        <image name="list" width="22.5" height="22.5"/>
+        <image name="main" width="22.5" height="22.5"/>
         <image name="peopleBack" width="700" height="512"/>
     </resources>
 </document>
