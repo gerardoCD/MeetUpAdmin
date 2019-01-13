@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="291" id="ZDY-L7-NLh"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-ig-U0B">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newCreateWhite" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-ig-U0B">
                                 <rect key="frame" x="139" y="175" width="136" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="bWe-dN-kza"/>
@@ -43,13 +43,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="createWhite" translatesAutoresizingMaskIntoConstraints="NO" id="7Tu-Ag-Qjh">
-                                <rect key="frame" x="177" y="424" width="175" height="73"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtN-wa-EzY">
+                                <rect key="frame" x="62" y="417" width="290" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="Fq3-v5-uBD"/>
-                                    <constraint firstAttribute="width" constant="175" id="U80-5x-F5t"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="Muk-Xx-kGi"/>
+                                    <constraint firstAttribute="height" constant="33" id="TK1-lm-Jfj"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="LaunchScreenColor"/>
                         <constraints>
@@ -57,11 +60,11 @@
                             <constraint firstItem="Rf4-81-CtS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6eg-Md-6AU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gBs-TC-Raf" secondAttribute="bottom" constant="20" id="9Rr-V4-KRp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBs-TC-Raf" secondAttribute="trailing" constant="22" id="P8f-Fs-rqJ"/>
+                            <constraint firstItem="OtN-wa-EzY" firstAttribute="top" secondItem="Rf4-81-CtS" secondAttribute="bottom" constant="1" id="YMF-Mb-VJ4"/>
                             <constraint firstItem="gBs-TC-Raf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="gh9-71-cUZ"/>
                             <constraint firstItem="2cX-ig-U0B" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hCh-ky-o7y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Tu-Ag-Qjh" secondAttribute="trailing" constant="62" id="hWp-nD-kWq"/>
-                            <constraint firstItem="7Tu-Ag-Qjh" firstAttribute="top" secondItem="Rf4-81-CtS" secondAttribute="bottom" constant="8" id="mbf-PQ-2Jh"/>
                             <constraint firstItem="Rf4-81-CtS" firstAttribute="top" secondItem="2cX-ig-U0B" secondAttribute="bottom" constant="30" id="pC0-TZ-aeZ"/>
+                            <constraint firstItem="OtN-wa-EzY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sHR-qg-4Ls"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -72,9 +75,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="createWhite" width="245" height="93"/>
         <image name="launcher" width="355" height="123"/>
-        <image name="people" width="700" height="700"/>
+        <image name="newCreateWhite" width="577" height="555"/>
         <namedColor name="LaunchScreenColor">
             <color red="0.094117647058823528" green="0.16078431372549021" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
