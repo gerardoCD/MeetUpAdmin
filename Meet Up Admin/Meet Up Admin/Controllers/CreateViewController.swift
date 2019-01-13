@@ -9,11 +9,15 @@
 import UIKit
 
 class CreateViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var createButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        createButton.layer.cornerRadius = 8.0
+        createButton.layer.masksToBounds = true
+        }
     
 }
