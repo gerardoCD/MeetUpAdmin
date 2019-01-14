@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class MainViewController: UIViewController {
     
@@ -18,6 +20,13 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if Auth.auth().currentUser != nil {
+            loginButton.isHidden = true
+            logOutButton.isHidden = false
+        }else{
+            loginButton.isHidden = false
+            logOutButton.isHidden = true
+        }
 
         logOutButton.layer.cornerRadius = 8.0
         logOutButton.layer.masksToBounds = true
@@ -35,5 +44,24 @@ class MainViewController: UIViewController {
                        completion: nil
         )
     }
+    
+    
+    @IBAction func LogInAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func LogOutAxtion(_ sender: UIButton) {
+        do{
+            try Auth.auth().signOut()
+            logOutButton.isHidden = true
+            loginButton.isHidden = false
+            
+        }catch{
+            let alert = UIAlertController(title: "Error", message: "You can't Log Out", preferredStyle: .alert )
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler:nil))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    
 
 }

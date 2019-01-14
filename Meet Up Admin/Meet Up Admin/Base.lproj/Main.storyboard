@@ -38,6 +38,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="LogOutAxtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cAi-Q5-5b0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwr-qu-uhv">
                                 <rect key="frame" x="130.66666666666666" y="569" width="152.99999999999997" height="44"/>
@@ -51,6 +54,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="LogInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Pu-tm-i8P"/>
                                     <segue destination="w61-z4-qep" kind="show" id="cr1-xn-c1c"/>
                                 </connections>
                             </button>
@@ -81,7 +85,7 @@
                     <connections>
                         <outlet property="createImage" destination="1N2-T7-GMo" id="kan-cl-88d"/>
                         <outlet property="headImage" destination="hiE-oD-Cfr" id="OrS-dX-dYv"/>
-                        <outlet property="logOutButton" destination="sLv-vJ-Qcf" id="Vt4-fS-40D"/>
+                        <outlet property="logOutButton" destination="sLv-vJ-Qcf" id="7Fo-qX-W5N"/>
                         <outlet property="loginButton" destination="Cwr-qu-uhv" id="K3N-fu-xiY"/>
                     </connections>
                 </viewController>
