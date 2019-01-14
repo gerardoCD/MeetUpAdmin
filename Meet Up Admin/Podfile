@@ -9,6 +9,7 @@ target 'Meet Up Admin' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   target 'Meet Up AdminTests' do
     inherit! :search_paths
     # Pods for testing

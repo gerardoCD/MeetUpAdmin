@@ -246,6 +246,9 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignUP:" destination="Hfa-4m-QMx" eventType="touchUpInside" id="rYS-As-8vU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="rewritte your password here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9K-cN-2dn">
                                 <rect key="frame" x="20" y="492" width="374" height="30"/>
@@ -388,6 +391,10 @@
                     </view>
                     <connections>
                         <outlet property="signUpButton" destination="LBR-Md-nMR" id="fsW-jk-Zmv"/>
+                        <outlet property="txtConfirmPassword" destination="y9K-cN-2dn" id="WQ3-fV-GNI"/>
+                        <outlet property="txtEmail" destination="zXl-vz-Idy" id="iC4-XZ-jNe"/>
+                        <outlet property="txtName" destination="E2E-8f-xjC" id="OkI-9A-36U"/>
+                        <outlet property="txtPassword" destination="KVx-rB-8F5" id="6AS-DH-CFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qge-eV-Czm" userLabel="First Responder" sceneMemberID="firstResponder"/>
