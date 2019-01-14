@@ -162,6 +162,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="SignUp:" destination="w61-z4-qep" eventType="touchUpInside" id="acy-Ek-oZn"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peopleBack" translatesAutoresizingMaskIntoConstraints="NO" id="grX-QM-yrc">
                                 <rect key="frame" x="146.66666666666666" y="557" width="120.99999999999997" height="65"/>
@@ -218,6 +221,8 @@
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="uzA-z0-Gt1" id="ZGn-ir-Pyu"/>
+                        <outlet property="txtEmail" destination="xUS-2l-fY8" id="GZK-fz-Zgx"/>
+                        <outlet property="txtPassword" destination="fD7-Lq-Xpv" id="fPL-6I-lfz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z82-ik-wUR" userLabel="First Responder" sceneMemberID="firstResponder"/>

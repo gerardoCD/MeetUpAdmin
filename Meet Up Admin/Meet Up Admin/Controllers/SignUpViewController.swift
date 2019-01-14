@@ -40,9 +40,7 @@ class SignUpViewController: UIViewController {
                                     let alert = UIAlertController(title: "Congratulations", message: "You are Singed", preferredStyle: .alert)
                                     alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in  self.navigationController?.popToRootViewController(animated: true)}))
                                     self.present(alert, animated: true)
-                                    
                                 }
-                                
                             }
                         } else {
                             let alert = UIAlertController(title: "Error", message: "Your datas are incorrects", preferredStyle: .alert )

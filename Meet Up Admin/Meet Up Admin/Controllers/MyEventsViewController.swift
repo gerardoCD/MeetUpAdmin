@@ -17,6 +17,7 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
