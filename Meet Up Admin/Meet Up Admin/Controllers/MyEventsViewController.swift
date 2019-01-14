@@ -8,6 +8,8 @@
 
 import UIKit
 
+var myIndex = 0
+
 class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -15,6 +17,11 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "MyEventsDescription", sender: myIndex)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -12,6 +12,7 @@
 		57660D5B21EB07F0000E6DDE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57660D5A21EB07F0000E6DDE /* LoginViewController.swift */; };
 		57660D5F21EB081D000E6DDE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57660D5C21EB080C000E6DDE /* SignUpViewController.swift */; };
 		576BFCB721E7D3DF00A35667 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576BFCB621E7D3DF00A35667 /* CreateViewController.swift */; };
+		578B702D21EC2AC4008865FB /* MyEventsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */; };
 		578BDAAF21E7AB4C004B931B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BDAAE21E7AB4C004B931B /* MainViewController.swift */; };
 		C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D483321E6D259002F0793 /* AppDelegate.swift */; };
 		C19D483921E6D259002F0793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19D483721E6D259002F0793 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		57660D5A21EB07F0000E6DDE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57660D5C21EB080C000E6DDE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		576BFCB621E7D3DF00A35667 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsDescriptionViewController.swift; sourceTree = "<group>"; };
 		578BDAAE21E7AB4C004B931B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C19D483021E6D259002F0793 /* Meet Up Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet Up Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19D483321E6D259002F0793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				5763498021E8EF390023CD03 /* MyEventsViewController.swift */,
 				57660D5A21EB07F0000E6DDE /* LoginViewController.swift */,
 				57660D5C21EB080C000E6DDE /* SignUpViewController.swift */,
+				578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578B702D21EC2AC4008865FB /* MyEventsDescriptionViewController.swift in Sources */,
 				57660D5B21EB07F0000E6DDE /* LoginViewController.swift in Sources */,
 				57660D5F21EB081D000E6DDE /* SignUpViewController.swift in Sources */,
 				C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */,
