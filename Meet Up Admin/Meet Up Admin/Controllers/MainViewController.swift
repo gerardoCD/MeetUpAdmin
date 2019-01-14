@@ -43,6 +43,14 @@ class MainViewController: UIViewController {
         },
                        completion: nil
         )
+        
+        if Auth.auth().currentUser != nil {
+            loginButton.isHidden = true
+            logOutButton.isHidden = false
+        }else{
+            loginButton.isHidden = false
+            logOutButton.isHidden = true
+        }
     }
     
     

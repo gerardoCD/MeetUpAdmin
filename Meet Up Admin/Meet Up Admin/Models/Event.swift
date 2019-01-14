@@ -45,7 +45,7 @@ class Event {
         self.street = street
     }
     
-    static func saveEvent(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:String,StartDate:String,StartHour:String,Street:String, completion: @escaping ((_ success:Bool)->())) {
+    static func saveEvent(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:String,StartDate:String,StartHour:String,Street:String, completion: @escaping ((_ success:Bool,_ key:String)->())) {
 
         var  databaseRef = Database.database().reference().child("events")
         let key = databaseRef.childByAutoId().key!
@@ -66,6 +66,42 @@ class Event {
             ] as [String:Any]
         
         databaseRef.setValue(userObject) { error, ref in
+            completion(error == nil,key)
+        }
+    }
+    
+    static func saveEventAdmin(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:String,StartDate:String,StartHour:String,Street:String,key:String,Tickets:[String], completion: @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef =  Database.database().reference().child("usersAdmin/profile/\(uid)/Events/\(key)")
+        let userObject = [
+            "City" : City,
+            "Country" : Country,
+            "Description" : Description,
+            "EndDate" : EndDate,
+            "EndHour" : EndHour,
+            "Image" : ImageUrl,
+            "Map" : Place,
+            "Name" : Name,
+            "Price" : Price,
+            "StartDate" : StartDate,
+            "StartHour" : StartHour,
+            "Street" : Street,
+            "tickest": Tickets
+            ] as [String:Any]
+        
+        databaseRef.updateChildValues(userObject) { error, ref in
+            completion(error == nil)
+        }
+    }
+    
+    static func saveEventTickets(key:String,Tickets:[String], completion: @escaping ((_ success:Bool)->())) {
+        let databaseRef =  Database.database().reference().child("eventsTickets/\(key)")
+        let userObject = [
+            "AllTickets": Tickets,
+            "RemainingTickets": Tickets
+            ] as [String:Any]
+        
+        databaseRef.updateChildValues(userObject) { error, ref in
             completion(error == nil)
         }
     }

@@ -36,20 +36,31 @@ class CreateViewController: UIViewController {
     
     
     @IBAction func CreateEvent(_ sender: UIButton) {
-      //  if Auth.auth().currentUser != nil {
-            Event.saveEvent(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: "wzw", StartDate: "wwxw", StartHour: "ededed", Street: "ededed") { (succes) in
+       if Auth.auth().currentUser != nil {
+        Event.saveEvent(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: "wzw", StartDate: "wwxw", StartHour: "ededed", Street: "ededed") { (succes,key)  in
                 if succes {
-                    print("Yeaaaaaa")
+                    let tickets = Ticket.generateTickets(number: Int(self.txtAvailableTickets.text!)!)
+                    Event.saveEventAdmin(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: "wzw", StartDate: "wwxw", StartHour: "ededed", Street: "ededed", key: key, Tickets: tickets, completion: { (sucess2) in
+                        if sucess2{
+                            Event.saveEventTickets(key: key, Tickets: tickets, completion: { (sucess3) in
+                                if sucess3{
+                                    print("Ya chingamos")
+                                }
+                            })
+                        }else{
+                            print("Error eventosAdmin")
+                        }
+                    })
                 }else{
-                    print("Error")
+                    print("ErrorEventos")
                 }
             }
             
-       // }else{
+        }else{
             
             performSegue(withIdentifier: "eventToLog", sender: nil)
             
-        //}
+        }
     }
     
     

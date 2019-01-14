@@ -7,3 +7,17 @@
 //
 
 import Foundation
+class Ticket{
+    static func generateTickets(number: Int) -> [String]{
+        var tickets = [String]()
+        var  contador = 0
+        while (contador < number){
+            let numero = String(Int.random(in: 10000 ... 99999))
+            if !tickets.contains(numero){
+                tickets.append(numero)
+                contador += 1
+            }
+        }
+        return tickets
+    }
+}
