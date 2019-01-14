@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 class SignUpViewController: UIViewController {
     
     
@@ -34,7 +35,7 @@ class SignUpViewController: UIViewController {
                     changeRequest?.commitChanges { error in
                         if error == nil {
                             //Alert
-                            saveProfile(userName: self.lblUserName.text!,userEmail:self.lblEmail.text!) { success in
+                            self.saveProfile(userName: self.txtName.text!,userEmail:self.txtEmail.text!) { success in
                                 if success {
                                     let alert = UIAlertController(title: "Congratulations", message: "You are Singed", preferredStyle: .alert)
                                     alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in  self.navigationController?.popToRootViewController(animated: true)}))
@@ -105,7 +106,7 @@ class SignUpViewController: UIViewController {
     func saveProfile(userName:String,userEmail:String, completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        let databaseRef = Database.database().reference().child("usersAdmin/profile/\(uid)")
         
         let userObject = [
             "email": userEmail,
