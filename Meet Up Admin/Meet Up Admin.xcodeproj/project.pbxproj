@@ -17,6 +17,7 @@
 		578B702D21EC2AC4008865FB /* MyEventsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */; };
 		578BDAAF21E7AB4C004B931B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BDAAE21E7AB4C004B931B /* MainViewController.swift */; };
 		C107F9FA21ED0D6B00A3F2DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C107F9F921ED0D6B00A3F2DF /* GoogleService-Info.plist */; };
+		C107F9FC21ED2F4200A3F2DF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C107F9FB21ED2F4200A3F2DF /* Event.swift */; };
 		C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D483321E6D259002F0793 /* AppDelegate.swift */; };
 		C19D483921E6D259002F0793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19D483721E6D259002F0793 /* Main.storyboard */; };
 		C19D483B21E6D25B002F0793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C19D483A21E6D25B002F0793 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		578BDAAE21E7AB4C004B931B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5D720ED5C3AC8733E9DFEE9F /* Pods-Meet Up Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Up Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Up Admin/Pods-Meet Up Admin.release.xcconfig"; sourceTree = "<group>"; };
 		C107F9F921ED0D6B00A3F2DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C107F9FB21ED2F4200A3F2DF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C19D483021E6D259002F0793 /* Meet Up Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet Up Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19D483321E6D259002F0793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C19D483821E6D259002F0793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				5763498521E8EFEA0023CD03 /* MyEventsTableViewCell.swift */,
+				C107F9FB21ED2F4200A3F2DF /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				578B702D21EC2AC4008865FB /* MyEventsDescriptionViewController.swift in Sources */,
+				C107F9FC21ED2F4200A3F2DF /* Event.swift in Sources */,
 				57660D5B21EB07F0000E6DDE /* LoginViewController.swift in Sources */,
 				57660D5F21EB081D000E6DDE /* SignUpViewController.swift in Sources */,
 				C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */,
