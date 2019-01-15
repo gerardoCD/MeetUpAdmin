@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class CreateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -253,11 +255,41 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     }
 
     
-    
-    
-    
+    func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference().child("user/\(uid)")
+        
+      //   guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
+        guard let imageData = UIImage.jpegQ(.medium) else {return}
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        storageRef.putData(imageData, metadata: metaData) { metaData, error in
+            if error == nil, metaData != nil {
+                if let url = metaData?.downloadURL() {
+                    completion(url)
+                } else {
+                    completion(nil)
+                }
+                // success!
+            } else {
+                // failed
+                completion(nil)
+            }
+        }
+    }
+}
 
-    
-    
-    
+
+extension UIImage {
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+    func jpegQ(_ jpegQuality: JPEGQuality) -> Data? {
+        return jpegData(compressionQuality: jpegQuality.rawValue)
+    }
 }
