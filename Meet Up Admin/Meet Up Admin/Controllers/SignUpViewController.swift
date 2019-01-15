@@ -23,7 +23,60 @@ class SignUpViewController: UIViewController {
 
         signUpButton.layer.cornerRadius = 8.0
         signUpButton.layer.masksToBounds = true
+        signUpButton.isUserInteractionEnabled = false
+        signUpButton.alpha = 0.5
     }
+    
+    @IBAction func emailChanged(_ sender: UITextField) {
+        if(txtName.text?.isEmpty == false) && (txtPassword.text?.isEmpty == false) && (txtConfirmPassword.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    @IBAction func usernameChanged(_ sender: UITextField) {
+        if(txtEmail.text?.isEmpty == false) && (txtPassword.text?.isEmpty == false) && (txtConfirmPassword.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    @IBAction func passwordChanged(_ sender: UITextField) {
+        if(txtEmail.text?.isEmpty == false) && (txtName.text?.isEmpty == false) && (txtConfirmPassword.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    @IBAction func confirmPassword(_ sender: UITextField) {
+        if(txtEmail.text?.isEmpty == false) && (txtName.text?.isEmpty == false) && (txtPassword.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    func buttonDisabled(){
+        signUpButton.isUserInteractionEnabled = false
+        signUpButton.alpha = 0.5
+    }
+    
+    func buttonEnabled(){
+        signUpButton.isUserInteractionEnabled = true
+        signUpButton.alpha = 1.0
+    }
+    
     
     @IBAction func SignUP(_ sender: UIButton) {
         

@@ -16,7 +16,7 @@
 		576BFCB721E7D3DF00A35667 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576BFCB621E7D3DF00A35667 /* CreateViewController.swift */; };
 		578B702D21EC2AC4008865FB /* MyEventsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */; };
 		578BDAAF21E7AB4C004B931B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BDAAE21E7AB4C004B931B /* MainViewController.swift */; };
-		C107F9FA21ED0D6B00A3F2DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C107F9F921ED0D6B00A3F2DF /* GoogleService-Info.plist */; };
+		57E376E021ED7391000C82F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57E376DF21ED7391000C82F4 /* GoogleService-Info.plist */; };
 		C107F9FC21ED2F4200A3F2DF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C107F9FB21ED2F4200A3F2DF /* Event.swift */; };
 		C107F9FE21ED4A2400A3F2DF /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C107F9FD21ED4A2400A3F2DF /* Ticket.swift */; };
 		C19D483421E6D259002F0793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D483321E6D259002F0793 /* AppDelegate.swift */; };
@@ -58,8 +58,8 @@
 		576BFCB621E7D3DF00A35667 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsDescriptionViewController.swift; sourceTree = "<group>"; };
 		578BDAAE21E7AB4C004B931B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		57E376DF21ED7391000C82F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D720ED5C3AC8733E9DFEE9F /* Pods-Meet Up Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Up Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Up Admin/Pods-Meet Up Admin.release.xcconfig"; sourceTree = "<group>"; };
-		C107F9F921ED0D6B00A3F2DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C107F9FB21ED2F4200A3F2DF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C107F9FD21ED4A2400A3F2DF /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C19D483021E6D259002F0793 /* Meet Up Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet Up Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +185,7 @@
 				C19D483A21E6D25B002F0793 /* Assets.xcassets */,
 				C19D483C21E6D25B002F0793 /* LaunchScreen.storyboard */,
 				C19D483F21E6D25B002F0793 /* Info.plist */,
-				C107F9F921ED0D6B00A3F2DF /* GoogleService-Info.plist */,
+				57E376DF21ED7391000C82F4 /* GoogleService-Info.plist */,
 			);
 			path = "Meet Up Admin";
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19D483E21E6D25B002F0793 /* LaunchScreen.storyboard in Resources */,
-				C107F9FA21ED0D6B00A3F2DF /* GoogleService-Info.plist in Resources */,
+				57E376E021ED7391000C82F4 /* GoogleService-Info.plist in Resources */,
 				C19D483B21E6D25B002F0793 /* Assets.xcassets in Resources */,
 				C19D483921E6D259002F0793 /* Main.storyboard in Resources */,
 			);

@@ -32,7 +32,120 @@ class CreateViewController: UIViewController {
 
         createButton.layer.cornerRadius = 8.0
         createButton.layer.masksToBounds = true
+        createButton.isUserInteractionEnabled = false
+        createButton.alpha = 0.5
         }
+    
+    
+    @IBAction func titleEvent(_ sender: UITextField) {
+        if(txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func startDate(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func endDate(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func countryChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func cityChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func streetChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func priceChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func ticketsChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func startTimeChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func endTimeChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func descriptionChanged(_ sender: UITextField) {
+        if(txtEventTitle.text?.isEmpty == false) && (txtStartDate.text?.isEmpty == false) && (txtEndDate.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtStartTime.text?.isEmpty == false) && (txtEndTime.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    func buttonDisabled(){
+        createButton.isUserInteractionEnabled = false
+        createButton.alpha = 0.5
+    }
+    
+    func buttonEnabled(){
+        createButton.isUserInteractionEnabled = true
+        createButton.alpha = 1.0
+    }
     
     
     @IBAction func CreateEvent(_ sender: UIButton) {

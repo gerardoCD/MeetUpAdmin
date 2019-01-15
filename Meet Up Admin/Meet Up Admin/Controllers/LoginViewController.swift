@@ -21,10 +21,40 @@ class LoginViewController: UIViewController {
 
         signInButton.layer.cornerRadius = 8.0
         signInButton.layer.masksToBounds = true
-       
-        
-        
+        signInButton.isUserInteractionEnabled = false
+        signInButton.alpha = 0.5
     }
+    
+    @IBAction func emailChanged(_ sender: UITextField) {
+        if(txtPassword.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    @IBAction func passwordChanged(_ sender: UITextField) {
+        if(txtEmail.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    
+    func buttonDisabled(){
+        signInButton.isUserInteractionEnabled = false
+        signInButton.alpha = 0.5
+    }
+    
+    func buttonEnabled(){
+        signInButton.isUserInteractionEnabled = true
+        signInButton.alpha = 1.0
+    }
+    
     
     @IBAction func SignUp(_ sender: UIButton) {
         
