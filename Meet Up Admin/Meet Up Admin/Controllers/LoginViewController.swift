@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var meetImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,13 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func SignUp(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [.curveEaseInOut, .autoreverse], animations:{
+            self.meetImage.transform = CGAffineTransform.init(scaleX: 2.0, y: 2.0)
+            self.meetImage.transform = CGAffineTransform.init(scaleX: 1.0, y: 1.0)
+            
+        },
+                       completion: nil
+        )
         
         Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { (user, error) in
             if user != nil {

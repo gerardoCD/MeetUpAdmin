@@ -17,6 +17,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
+    @IBOutlet weak var meetImage: UIImageView!
+    @IBOutlet weak var joinUsImage: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,20 @@ class SignUpViewController: UIViewController {
         signUpButton.layer.masksToBounds = true
         signUpButton.isUserInteractionEnabled = false
         signUpButton.alpha = 0.5
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        joinUsImage.center.x -= view.bounds.width
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 1.5, delay: 0.3, options: [], animations:{
+            self.joinUsImage.center.x += self.view.bounds.width
+        },
+                       completion: nil
+        )
     }
     
     @IBAction func emailChanged(_ sender: UITextField) {
@@ -79,6 +97,14 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func SignUP(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [.curveEaseInOut, .autoreverse], animations:{
+            self.meetImage.transform = CGAffineTransform.init(scaleX: 2.0, y: 2.0)
+            self.meetImage.transform = CGAffineTransform.init(scaleX: 1.0, y: 1.0)
+            
+        },
+                       completion: nil
+        )
         
         if txtPassword.text == txtConfirmPassword.text{
             Auth.auth().createUser(withEmail: txtEmail.text!, password: txtPassword.text!) { (authResult, error) in

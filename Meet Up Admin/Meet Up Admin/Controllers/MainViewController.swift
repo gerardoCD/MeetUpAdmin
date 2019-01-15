@@ -16,6 +16,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createImage: UIImageView!
     @IBOutlet weak var headImage: UIImageView!
+    @IBOutlet weak var splashImageTwo: UIImageView!
+    @IBOutlet weak var splashImage: UIImageView!
+    
     
 
     override func viewDidLoad() {
@@ -32,6 +35,8 @@ class MainViewController: UIViewController {
         logOutButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = 8.0
         loginButton.layer.masksToBounds = true
+        splashImage.alpha = 0.0
+        splashImageTwo.alpha = 1.0
     
     }
     
@@ -40,6 +45,13 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 2.0, delay: 0.3, options: [.curveEaseIn], animations:{
             self.createImage.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
              self.createImage.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        },
+                       completion: nil
+        )
+        
+        UIView.animate(withDuration: 7, delay: 0.3, options: [.curveEaseInOut, .repeat, .autoreverse], animations:{
+            self.splashImageTwo.alpha = 0.0
+            self.splashImage.alpha = 1.0
         },
                        completion: nil
         )
