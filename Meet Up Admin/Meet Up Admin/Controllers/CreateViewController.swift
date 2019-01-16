@@ -32,13 +32,14 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     var alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
     var viewController: UIViewController?
     var pickImageCallback : ((UIImage) -> ())?;
+    var url: URL? = nil
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        createButton.layer.cornerRadius = 8.0
+         createButton.layer.cornerRadius = 8.0
         createButton.layer.masksToBounds = true
         createButton.isUserInteractionEnabled = false
         createButton.alpha = 0.5
@@ -157,6 +158,11 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     
     
     @IBAction func CreateEvent(_ sender: UIButton) {
+        uploadProfileImage(imgEvent.image!) { (urlAux) in
+            self.url = urlAux
+        }
+        
+      //  print(url!)
        if Auth.auth().currentUser != nil {
         Event.saveEvent(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: "wzw", StartDate: "wwxw", StartHour: "ededed", Street: "ededed") { (succes,key)  in
                 if succes {
@@ -258,16 +264,19 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let storageRef = Storage.storage().reference().child("user/\(uid)")
+
         
-      //   guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
-        guard let imageData = UIImage.jpegQ(.medium) else {return}
+     
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else {return}
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpg"
+        
         storageRef.putData(imageData, metadata: metaData) { metaData, error in
             if error == nil, metaData != nil {
-                if let url = metaData?.downloadURL() {
-                    completion(url)
+                if let url = metaData?.path {
+                    let url2 = URL(string: url)
+                    completion(url2)
                 } else {
                     completion(nil)
                 }
