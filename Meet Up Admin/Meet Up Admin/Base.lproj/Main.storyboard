@@ -700,9 +700,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="2732" height="1358"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-jI-s8R">
-                                                <rect key="frame" x="8" y="619" width="155" height="21"/>
+                                                <rect key="frame" x="8" y="619" width="84" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="4gA-KD-5YS"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="4gA-KD-5YS"/>
                                                     <constraint firstAttribute="height" constant="21" id="jK1-5k-Lua"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -725,6 +725,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="569298659.44174099">
                                                     <!--2019-01-16 02:30:59 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="startDateChanged:" destination="qAs-QK-zkP" eventType="valueChanged" id="nwf-tZ-Muk"/>
+                                                </connections>
                                             </datePicker>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-zz-cvH">
                                                 <rect key="frame" x="8" y="835" width="359" height="85"/>
@@ -742,6 +745,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="569300150.56914794">
                                                     <!--2019-01-16 02:55:50 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="endDateChanged:" destination="qAs-QK-zkP" eventType="valueChanged" id="T6t-eb-bR5"/>
+                                                </connections>
                                             </datePicker>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launcher" translatesAutoresizingMaskIntoConstraints="NO" id="8Sc-Tc-AWX">
                                                 <rect key="frame" x="78" y="8" width="219" height="47"/>
@@ -795,10 +801,10 @@
                                                 </connections>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End date:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rb-Rb-MQW">
-                                                <rect key="frame" x="8" y="765" width="155" height="21"/>
+                                                <rect key="frame" x="8" y="765" width="84" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="7JW-eD-Nyp"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="Axv-Hs-HOA"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="Axv-Hs-HOA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -825,6 +831,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="countryChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="DQw-XO-d7d"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Sr-kH-p6D">
+                                                <rect key="frame" x="8" y="492" width="359" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="cityChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="omi-H5-ucQ"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-bE-KI9">
@@ -907,9 +922,9 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start date:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B24-GQ-O7f">
-                                                <rect key="frame" x="8" y="590" width="155" height="21"/>
+                                                <rect key="frame" x="8" y="590" width="84" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="BbZ-cm-vtG"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="BbZ-cm-vtG"/>
                                                     <constraint firstAttribute="height" constant="21" id="gDp-V4-Zjp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -917,7 +932,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRV-hI-4gv">
-                                                <rect key="frame" x="171" y="590" width="196" height="21"/>
+                                                <rect key="frame" x="100" y="591" width="196" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="JhP-rz-xaD"/>
                                                     <constraint firstAttribute="height" constant="21" id="MpQ-bB-c6p"/>
@@ -927,7 +942,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5U-h5-Qgz">
-                                                <rect key="frame" x="171" y="619" width="196" height="20"/>
+                                                <rect key="frame" x="100" y="620" width="196" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="4e1-0J-i7B"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="lpX-qd-qhx"/>
@@ -937,9 +952,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End time:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-wb-9yU">
-                                                <rect key="frame" x="8" y="794" width="155" height="21"/>
+                                                <rect key="frame" x="8" y="794" width="84" height="21"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="cm8-AT-YWs"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="cm8-AT-YWs"/>
                                                     <constraint firstAttribute="height" constant="21" id="uVu-7t-Spf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -947,20 +962,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-a7-0u0">
-                                                <rect key="frame" x="171" y="765" width="196" height="21"/>
+                                                <rect key="frame" x="100" y="765" width="196" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="6mk-lR-PBf"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="mKu-bX-TVP"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWX-GZ-ead">
-                                                <rect key="frame" x="171" y="794" width="196" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="IYQ-JL-LMj"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="N0R-aS-7Bm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -979,15 +984,16 @@
                                                     <action selector="priceChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="PbU-XX-AdP"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Sr-kH-p6D">
-                                                <rect key="frame" x="8" y="492" width="359" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="cityChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="omi-H5-ucQ"/>
-                                                </connections>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWX-GZ-ead">
+                                                <rect key="frame" x="100" y="794" width="196" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="IYQ-JL-LMj"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="N0R-aS-7Bm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1022,8 +1028,8 @@
                                             <constraint firstItem="52a-Sx-Ve2" firstAttribute="leading" secondItem="4yp-Iq-qiC" secondAttribute="leading" constant="8" id="McR-Ak-C5B"/>
                                             <constraint firstItem="lwx-lt-AHA" firstAttribute="top" secondItem="52a-Sx-Ve2" secondAttribute="bottom" constant="50" id="My1-RP-eMa"/>
                                             <constraint firstItem="B24-GQ-O7f" firstAttribute="top" secondItem="2xm-bE-KI9" secondAttribute="bottom" constant="30" id="NbI-ry-ZGH"/>
-                                            <constraint firstAttribute="trailing" secondItem="D5U-h5-Qgz" secondAttribute="trailing" constant="8" id="Nxh-BH-Clk"/>
-                                            <constraint firstAttribute="trailing" secondItem="cWX-GZ-ead" secondAttribute="trailing" constant="8" id="Ogu-hQ-5Do"/>
+                                            <constraint firstAttribute="trailing" secondItem="D5U-h5-Qgz" secondAttribute="trailing" constant="79" id="Nxh-BH-Clk"/>
+                                            <constraint firstAttribute="trailing" secondItem="cWX-GZ-ead" secondAttribute="trailing" constant="79" id="Ogu-hQ-5Do"/>
                                             <constraint firstAttribute="trailing" secondItem="XiQ-ZC-q9L" secondAttribute="trailing" constant="8" id="Ouh-iE-ID5"/>
                                             <constraint firstAttribute="trailing" secondItem="B5C-0D-7ym" secondAttribute="trailing" constant="8" id="P96-1m-bAr"/>
                                             <constraint firstItem="lwx-lt-AHA" firstAttribute="centerX" secondItem="4yp-Iq-qiC" secondAttribute="centerX" id="P9D-DV-OGh"/>
@@ -1042,7 +1048,7 @@
                                             <constraint firstItem="cWX-GZ-ead" firstAttribute="top" secondItem="2wS-a7-0u0" secondAttribute="bottom" constant="8" id="av7-hE-rG3"/>
                                             <constraint firstItem="B24-GQ-O7f" firstAttribute="leading" secondItem="2xm-bE-KI9" secondAttribute="leading" id="bCA-Iy-7gt"/>
                                             <constraint firstItem="EEa-Rc-pAA" firstAttribute="leading" secondItem="4yp-Iq-qiC" secondAttribute="leading" constant="8" id="bHT-oe-LM1"/>
-                                            <constraint firstItem="B24-GQ-O7f" firstAttribute="baseline" secondItem="tRV-hI-4gv" secondAttribute="baseline" id="biP-8D-nfr"/>
+                                            <constraint firstItem="B24-GQ-O7f" firstAttribute="baseline" secondItem="tRV-hI-4gv" secondAttribute="baseline" constant="-1" id="biP-8D-nfr"/>
                                             <constraint firstItem="nZQ-P6-VgP" firstAttribute="top" secondItem="xk7-wb-9yU" secondAttribute="bottom" constant="20" id="bqa-tF-V2f"/>
                                             <constraint firstItem="z4Z-ym-P9j" firstAttribute="leading" secondItem="4yp-Iq-qiC" secondAttribute="leading" constant="8" id="dPe-pt-qY7"/>
                                             <constraint firstAttribute="bottom" secondItem="lwx-lt-AHA" secondAttribute="bottom" constant="91" id="e1G-jN-gp6"/>
@@ -1054,10 +1060,10 @@
                                             <constraint firstItem="bwQ-5o-hHm" firstAttribute="top" secondItem="8Sc-Tc-AWX" secondAttribute="bottom" constant="35" id="k1r-qI-YTg"/>
                                             <constraint firstAttribute="trailing" secondItem="jgo-b5-8jD" secondAttribute="trailing" constant="8" id="k45-ID-9UA"/>
                                             <constraint firstItem="XUa-tg-wjb" firstAttribute="top" secondItem="B5C-0D-7ym" secondAttribute="bottom" constant="8" id="lKH-Gn-jdM"/>
-                                            <constraint firstAttribute="trailing" secondItem="tRV-hI-4gv" secondAttribute="trailing" constant="8" id="leg-ZH-QCb"/>
+                                            <constraint firstAttribute="trailing" secondItem="tRV-hI-4gv" secondAttribute="trailing" constant="79" id="leg-ZH-QCb"/>
                                             <constraint firstItem="xk7-wb-9yU" firstAttribute="leading" secondItem="4yp-Iq-qiC" secondAttribute="leading" constant="8" id="mI3-kZ-1dA"/>
                                             <constraint firstItem="EEa-Rc-pAA" firstAttribute="top" secondItem="XUa-tg-wjb" secondAttribute="bottom" constant="30" id="mKS-Uq-9QO"/>
-                                            <constraint firstAttribute="trailing" secondItem="2wS-a7-0u0" secondAttribute="trailing" constant="8" id="mZe-37-opo"/>
+                                            <constraint firstAttribute="trailing" secondItem="2wS-a7-0u0" secondAttribute="trailing" constant="79" id="mZe-37-opo"/>
                                             <constraint firstAttribute="trailing" secondItem="EEa-Rc-pAA" secondAttribute="trailing" constant="8" id="nf8-Fm-sKU"/>
                                             <constraint firstAttribute="height" constant="1358" id="nqs-zV-7ym"/>
                                             <constraint firstItem="k8r-ul-EHp" firstAttribute="top" secondItem="bnv-jI-s8R" secondAttribute="bottom" constant="20" id="oDH-gf-t7N"/>
@@ -1103,7 +1109,13 @@
                     <size key="freeformSize" width="375" height="1350"/>
                     <connections>
                         <outlet property="createButton" destination="lwx-lt-AHA" id="ijG-oG-S87"/>
+                        <outlet property="endDateLabel" destination="2wS-a7-0u0" id="Pv5-TK-dgq"/>
+                        <outlet property="endDatePicker" destination="nZQ-P6-VgP" id="9AK-9t-1XU"/>
+                        <outlet property="endTimeLabel" destination="cWX-GZ-ead" id="HSg-sF-xxw"/>
                         <outlet property="imgEvent" destination="bkq-yP-7cx" id="v6g-ja-QdL"/>
+                        <outlet property="startDateLabel" destination="tRV-hI-4gv" id="FGH-m8-J66"/>
+                        <outlet property="startDatePicker" destination="GRz-ll-KBS" id="IzO-ek-uGp"/>
+                        <outlet property="startTimeLabel" destination="D5U-h5-Qgz" id="Lox-Q2-hWz"/>
                         <outlet property="txtAvailableTickets" destination="XUa-tg-wjb" id="gIH-du-KyO"/>
                         <outlet property="txtCity" destination="4Sr-kH-p6D" id="g4Y-mw-P0W"/>
                         <outlet property="txtCountry" destination="lK5-rc-wIW" id="58F-eL-q6T"/>

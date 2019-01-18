@@ -17,16 +17,19 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var txtEventTitle: UITextField!
     @IBOutlet weak var imgEvent: UIImageView!
-    //@IBOutlet weak var txtStartDate: UITextField!
-    //@IBOutlet weak var txtEndDate: UITextField!
     @IBOutlet weak var txtCountry: UITextField!
     @IBOutlet weak var txtCity: UITextField!
     @IBOutlet weak var txtStreet: UITextField!
     @IBOutlet weak var txtPrice: UITextField!
     @IBOutlet weak var txtAvailableTickets: UITextField!
-    //@IBOutlet weak var txtStartTime: UITextField!
-    //@IBOutlet weak var txtEndTime: UITextField!
     @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var startTimeLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
+    
     
     var picker = UIImagePickerController();
     var alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
@@ -39,11 +42,30 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         createButton.layer.cornerRadius = 8.0
+        createButton.layer.cornerRadius = 8.0
         createButton.layer.masksToBounds = true
         createButton.isUserInteractionEnabled = false
         createButton.alpha = 0.5
+        
+        startDatePicker?.datePickerMode = .dateAndTime
+        startDatePicker?.minimumDate = Date.calculateDate(day: 1, month: 2, year: 2019, hour: 0, minute: 0)
+        startDatePicker?.maximumDate = Date.calculateDate(day: 31, month: 12, year: 2019, hour: 0, minute: 0)
+        endDatePicker?.datePickerMode = .dateAndTime
+        endDatePicker?.minimumDate = Date.calculateDate(day: 1, month: 2, year: 2019, hour: 1, minute: 0)
+        startDatePicker?.maximumDate = Date.calculateDate(day: 31, month: 12, year: 2019, hour: 1, minute: 0)
         }
+    
+    @IBAction func startDateChanged(_ sender: UIDatePicker) {
+        startDateLabel.text = "Day: \(sender.date.getDayMonthYearHourMinuteSecond().day) Month: \(sender.date.getDayMonthYearHourMinuteSecond().month) Year: \(sender.date.getDayMonthYearHourMinuteSecond().year)"
+        
+         startTimeLabel.text = "Hour: \(sender.date.getDayMonthYearHourMinuteSecond().hour) Minute: \(sender.date.getDayMonthYearHourMinuteSecond().minute) Second: \(sender.date.getDayMonthYearHourMinuteSecond().second)"
+    }
+    
+    @IBAction func endDateChanged(_ sender: UIDatePicker) {
+        endDateLabel.text = "Day: \(sender.date.getDayMonthYearHourMinuteSecond().day) Month: \(sender.date.getDayMonthYearHourMinuteSecond().month) Year: \(sender.date.getDayMonthYearHourMinuteSecond().year)"
+        
+        endTimeLabel.text = "Hour: \(sender.date.getDayMonthYearHourMinuteSecond().hour) Minute: \(sender.date.getDayMonthYearHourMinuteSecond().minute) Second: \(sender.date.getDayMonthYearHourMinuteSecond().second)"
+    }
     
     
     @IBAction func titleEvent(_ sender: UITextField) {
