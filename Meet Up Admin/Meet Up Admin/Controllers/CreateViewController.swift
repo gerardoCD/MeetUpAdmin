@@ -36,6 +36,10 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     var viewController: UIViewController?
     var pickImageCallback : ((UIImage) -> ())?;
     var url: URL? = nil
+    var startDateSend = ""
+    var startTimeSend = ""
+    var endDateSend = ""
+    var endTimeSend = ""
 
     
     
@@ -55,16 +59,38 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         startDatePicker?.maximumDate = Date.calculateDate(day: 31, month: 12, year: 2019, hour: 1, minute: 0)
         }
     
+    
+    
     @IBAction func startDateChanged(_ sender: UIDatePicker) {
         startDateLabel.text = "Day: \(sender.date.getDayMonthYearHourMinuteSecond().day) Month: \(sender.date.getDayMonthYearHourMinuteSecond().month) Year: \(sender.date.getDayMonthYearHourMinuteSecond().year)"
         
          startTimeLabel.text = "Hour: \(sender.date.getDayMonthYearHourMinuteSecond().hour) Minute: \(sender.date.getDayMonthYearHourMinuteSecond().minute) Second: \(sender.date.getDayMonthYearHourMinuteSecond().second)"
+        
+        startDateSend = "\(sender.date.getDayMonthYearHourMinuteSecond().day)/\(sender.date.getDayMonthYearHourMinuteSecond().month)/\(sender.date.getDayMonthYearHourMinuteSecond().year)"
+        
+        startTimeSend = "\(sender.date.getDayMonthYearHourMinuteSecond().hour):\(sender.date.getDayMonthYearHourMinuteSecond().minute):\(sender.date.getDayMonthYearHourMinuteSecond().second)"
     }
     
     @IBAction func endDateChanged(_ sender: UIDatePicker) {
         endDateLabel.text = "Day: \(sender.date.getDayMonthYearHourMinuteSecond().day) Month: \(sender.date.getDayMonthYearHourMinuteSecond().month) Year: \(sender.date.getDayMonthYearHourMinuteSecond().year)"
         
         endTimeLabel.text = "Hour: \(sender.date.getDayMonthYearHourMinuteSecond().hour) Minute: \(sender.date.getDayMonthYearHourMinuteSecond().minute) Second: \(sender.date.getDayMonthYearHourMinuteSecond().second)"
+        
+        endDateSend = "\(sender.date.getDayMonthYearHourMinuteSecond().day)/\(sender.date.getDayMonthYearHourMinuteSecond().month)/\(sender.date.getDayMonthYearHourMinuteSecond().year)"
+        
+        endTimeSend = "\(sender.date.getDayMonthYearHourMinuteSecond().hour):\(sender.date.getDayMonthYearHourMinuteSecond().minute):\(sender.date.getDayMonthYearHourMinuteSecond().second)"
+    }
+    
+    
+    @IBAction func pressButton(_ sender: UIButton) {
+        let startDate = startDateSend
+        let startTime = startTimeSend
+        let endDate = endDateSend
+        let endTime = endTimeSend
+        print(startDate)
+        print(startTime)
+        print(endDate)
+        print(endTime)
     }
     
     
