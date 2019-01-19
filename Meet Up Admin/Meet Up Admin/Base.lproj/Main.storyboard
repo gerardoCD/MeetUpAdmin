@@ -868,7 +868,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <action selector="ticketsChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="2J5-Jg-zZj"/>
                                                 </connections>
@@ -968,7 +968,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <action selector="priceChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="PbU-XX-AdP"/>
                                                 </connections>
@@ -996,8 +996,8 @@
                                                     <action selector="placeNameChanged:" destination="qAs-QK-zkP" eventType="editingChanged" id="bAK-u5-DSc"/>
                                                 </connections>
                                             </textField>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-yP-7cx">
-                                                <rect key="frame" x="42" y="213" width="290" height="195"/>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bkq-yP-7cx">
+                                                <rect key="frame" x="42.666666666666657" y="213" width="290" height="195"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="290" id="HLY-yp-D3Z"/>
@@ -1195,7 +1195,6 @@
     <resources>
         <image name="White" width="650" height="433"/>
         <image name="createIcon" width="22.5" height="22.5"/>
-        <image name="defaultImage" width="1600" height="1101"/>
         <image name="gradient-1" width="2732" height="2732"/>
         <image name="join" width="624" height="183"/>
         <image name="launcher" width="355" height="123"/>

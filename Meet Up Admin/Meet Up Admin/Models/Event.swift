@@ -45,7 +45,7 @@ class Event {
         self.street = street
     }
     
-    static func saveEvent(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:String,StartDate:String,StartHour:String,Street:String, completion: @escaping ((_ success:Bool,_ key:String)->())) {
+    static func saveEvent(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:Double,StartDate:String,StartHour:String,Street:String, completion: @escaping ((_ success:Bool,_ key:String)->())) {
 
         var  databaseRef = Database.database().reference().child("events")
         let key = databaseRef.childByAutoId().key!
@@ -70,7 +70,7 @@ class Event {
         }
     }
     
-    static func saveEventAdmin(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:String,StartDate:String,StartHour:String,Street:String,key:String,Tickets:[String], completion: @escaping ((_ success:Bool)->())) {
+    static func saveEventAdmin(City:String,Country:String,Description:String,EndDate:String,EndHour:String,ImageUrl:String,Place:String,Name:String,Price:Double,StartDate:String,StartHour:String,Street:String,key:String,Tickets:[String], completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let databaseRef =  Database.database().reference().child("usersAdmin/profile/\(uid)/Events/\(key)")
         let userObject = [

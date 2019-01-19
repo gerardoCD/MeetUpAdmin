@@ -38,7 +38,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     var alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
     var viewController: UIViewController?
     var pickImageCallback : ((UIImage) -> ())?;
-    var url: URL? = nil
+    var url: String? = nil
     var startDateSend = ""
     var startTimeSend = ""
     var endDateSend = ""
@@ -48,7 +48,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imgEvent.image = UIImage(named: "defaultImage")
         createButton.layer.cornerRadius = 8.0
         createButton.layer.masksToBounds = true
         createButton.isUserInteractionEnabled = false
@@ -182,16 +182,15 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     
     
     @IBAction func CreateEvent(_ sender: UIButton) {
-        uploadProfileImage(imgEvent.image!) { (urlAux) in
-            self.url = urlAux
-        }
-        
+       
       //  print(url!)
        if Auth.auth().currentUser != nil {
-        Event.saveEvent(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: "wzw", StartDate: "wwxw", StartHour: "ededed", Street: "ededed") { (succes,key)  in
+        uploadProfileImage(imgEvent.image!) { (urlAux) in
+            self.url = urlAux
+            Event.saveEvent(City: self.txtCity.text ?? "", Country: self.txtCountry.text ?? "", Description: self.txtDescription.text ?? "", EndDate: self.endDateSend, EndHour: self.endTimeSend, ImageUrl: self.url ?? "", Place: self.txtPlace.text ?? "", Name: self.txtEventTitle.text ?? "", Price: Double(self.txtPrice.text ?? "0.0")! , StartDate: self.startDateSend, StartHour: self.startTimeSend, Street: self.txtStreet.text ?? "") { (succes,key)  in
                 if succes {
                     let tickets = Ticket.generateTickets(number: Int(self.txtAvailableTickets.text!)!)
-                    Event.saveEventAdmin(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: "wzw", StartDate: "wwxw", StartHour: "ededed", Street: "ededed", key: key, Tickets: tickets, completion: { (sucess2) in
+                    Event.saveEventAdmin(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: Double(self.txtPrice.text ?? "0.0")!, StartDate: "wwxw", StartHour: "ededed", Street: "ededed", key: key, Tickets: tickets, completion: { (sucess2) in
                         if sucess2{
                             Event.saveEventTickets(key: key, Tickets: tickets, completion: { (sucess3) in
                                 if sucess3{
@@ -206,7 +205,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
                     print("ErrorEventos")
                 }
             }
-            
+        }
         }else{
             
             performSegue(withIdentifier: "eventToLog", sender: nil)
@@ -285,9 +284,9 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     }
 
     
-    func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
+    func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:String?)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let storageRef = Storage.storage().reference().child("user/\(uid)")
+        let storageRef = Storage.storage().reference().child("\(uid)"+"\(Int.random(in: 0 ... 99999999999999))")
 
         
      
@@ -298,12 +297,9 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         
         storageRef.putData(imageData, metadata: metaData) { metaData, error in
             if error == nil, metaData != nil {
-                if let url = metaData?.path {
-                    let url2 = URL(string: url)
-                    completion(url2)
-                } else {
-                    completion(nil)
-                }
+             storageRef.downloadURL(completion: { (url, error) in
+                  completion(url?.absoluteString)
+                })
                 // success!
             } else {
                 // failed
@@ -311,6 +307,8 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
             }
         }
     }
+    
+    
 }
 
 
