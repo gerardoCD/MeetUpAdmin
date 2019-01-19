@@ -29,6 +29,9 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
+    @IBOutlet weak var txtPlace: UITextField!
+    
+    
     
     
     var picker = UIImagePickerController();
@@ -95,6 +98,15 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     
     
     @IBAction func titleEvent(_ sender: UITextField) {
+        if(txtPlace.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+            if sender.text?.isEmpty == true{
+                buttonDisabled()
+            }else{
+                buttonEnabled()
+            }
+        }
+    }
+    @IBAction func placeNameChanged(_ sender: UITextField) {
         if(txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
@@ -104,7 +116,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     @IBAction func countryChanged(_ sender: UITextField) {
-        if(txtEventTitle.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+        if(txtPlace.text?.isEmpty == false) && (txtEventTitle.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
             }else{
@@ -113,7 +125,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     @IBAction func cityChanged(_ sender: UITextField) {
-        if(txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+        if(txtPlace.text?.isEmpty == false) && (txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
             }else{
@@ -122,7 +134,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     @IBAction func streetChanged(_ sender: UITextField) {
-        if(txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+        if(txtPlace.text?.isEmpty == false) && (txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
             }else{
@@ -131,7 +143,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     @IBAction func priceChanged(_ sender: UITextField) {
-        if(txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+        if(txtPlace.text?.isEmpty == false) && (txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
             }else{
@@ -140,7 +152,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     @IBAction func ticketsChanged(_ sender: UITextField) {
-        if(txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
+        if(txtPlace.text?.isEmpty == false) && (txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtDescription.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
             }else{
@@ -149,7 +161,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     @IBAction func descriptionChanged(_ sender: UITextField) {
-        if(txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false){
+        if(txtPlace.text?.isEmpty == false) && (txtEventTitle.text?.isEmpty == false) && (txtCountry.text?.isEmpty == false) && (txtCity.text?.isEmpty == false) && (txtStreet.text?.isEmpty == false) && (txtPrice.text?.isEmpty == false) && (txtAvailableTickets.text?.isEmpty == false){
             if sender.text?.isEmpty == true{
                 buttonDisabled()
             }else{
