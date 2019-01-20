@@ -193,13 +193,15 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
             Event.saveEvent(City: self.txtCity.text ?? "", Country: self.txtCountry.text ?? "", Description: self.txtDescription.text ?? "", EndDate: self.endDateSend, EndHour: self.endTimeSend, ImageUrl: self.url ?? "", Place: self.txtPlace.text ?? "", Name: self.txtEventTitle.text ?? "", Price: Double(self.txtPrice.text ?? "0.0")! , StartDate: self.startDateSend, StartHour: self.startTimeSend, Street: self.txtStreet.text ?? "") { (succes,key)  in
                 if succes {
                     let tickets = Ticket.generateTickets(number: Int(self.txtAvailableTickets.text!)!)
-                    Event.saveEventAdmin(City: "s", Country: "a", Description: "a", EndDate: "a", EndHour: "2", ImageUrl: "2ww1", Place: "ss", Name: "dwed", Price: Double(self.txtPrice.text ?? "0.0")!, StartDate: "wwxw", StartHour: "ededed", Street: "ededed", key: key, Tickets: tickets, completion: { (sucess2) in
+                    Event.saveEventAdmin(City: self.txtCity.text ?? "", Country: self.txtCountry.text ?? "", Description: self.txtDescription.text ?? "", EndDate: self.endDateSend, EndHour: self.endTimeSend, ImageUrl: self.url ?? "", Place: self.txtPlace.text ?? "", Name: self.txtEventTitle.text ?? "", Price: Double(self.txtPrice.text ?? "0.0")! , StartDate: self.startDateSend, StartHour: self.startTimeSend, Street: self.txtStreet.text ?? "", key: key, Tickets: tickets, completion: { (sucess2) in
                         if sucess2{
                             Event.saveEventTickets(key: key, Tickets: tickets, completion: { (sucess3) in
                                 if sucess3{
                                     self.activityIndicator.stopAnimating()
-                                    self.activityIndicator.isHidden = false 
-                                    print("Ya chingamos")
+                                    self.activityIndicator.isHidden = true
+                                    let alert = UIAlertController(title: "Congratulations", message: "You have a new event saved", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in  self.navigationController?.popToRootViewController(animated: true)}))
+                                    self.present(alert, animated: true)
                                 }
                             })
                         }else{
