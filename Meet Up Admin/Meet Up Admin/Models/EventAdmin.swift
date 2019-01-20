@@ -35,28 +35,6 @@ class EventAdmin {
 }
     
     static func loadTickets2(completion: @escaping (_ events: [EventAdmin]) -> Void){
-//      //  guard let uid = Auth.auth().currentUser?.uid else {return}
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference()
-//        ref.child("events").observeSingleEvent(of: .value, with: { (snapshot) in
-//            var events = [EventAdmin]()
-//            for event in snapshot.children.allObjects as! [DataSnapshot] {
-//                let eventObject = event.value as? [String: AnyObject]
-//                let evenId = event.key
-//                let eventName  = eventObject?["Name"]
-//                let eventImageString = eventObject?["Image"]
-//                let evenStartDate = eventObject?["StartDate"]
-//                let eventEndDate = eventObject?["EndDate"]
-//                let eventCost = eventObject?["Price"]
-//                //                let url = URL(string: eventImage as! String)
-//                //                let data = try? Data(contentsOf: url!)
-//                //                let image  = UIImage(data: data!)
-//                let evento = EventAdmin(id: evenId, name: eventName as! String, photo: nil, cost: eventCost as! Double, photoString: eventImageString as? String, tickets: nil, startDate: evenStartDate as! String, endDate: eventEndDate as? String, availableTickets: nil)
-//                events.append(evento)
-//            }
-//            print(events)
-//            completion(events)
-//        })
         guard let uid = Auth.auth().currentUser?.uid else {return}
         var ref: DatabaseReference!
         ref = Database.database().reference()
@@ -71,9 +49,6 @@ class EventAdmin {
                 let evenStartDate = eventObject?["StartDate"]
                 let eventEndDate = eventObject?["EndDate"]
                 let eventCost = eventObject?["Price"]
-                            //                let url = URL(string: eventImage as! String)
-                            //                let data = try? Data(contentsOf: url!)
-                            //                let image  = UIImage(data: data!)
                 let evento = EventAdmin(id: evenId, name: eventName as! String, photo: nil, cost: eventCost as! Double, photoString: eventImageString as? String, tickets: nil, startDate: evenStartDate as! String, endDate: eventEndDate as? String, availableTickets: nil)
                             events.append(evento)
                         }
