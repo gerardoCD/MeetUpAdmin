@@ -507,6 +507,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Events" image="list" id="vYu-k5-3aP"/>
                     <connections>
+                        <outlet property="tableView" destination="PIb-s7-uxB" id="c4a-LB-lPM"/>
                         <segue destination="ZC8-Sj-9Fd" kind="show" identifier="MyEventsDescription" id="uYn-9M-Pml"/>
                     </connections>
                 </viewController>
@@ -675,6 +676,12 @@
                         <viewLayoutGuide key="safeArea" id="Txt-Jt-AXb"/>
                     </view>
                     <connections>
+                        <outlet property="imgEvent" destination="Wab-Dd-9pB" id="byz-IL-yb8"/>
+                        <outlet property="lblEndDate" destination="rah-SH-clG" id="CFL-cL-Ecv"/>
+                        <outlet property="lblPrice" destination="6sO-dl-A7H" id="cZk-Ac-aW7"/>
+                        <outlet property="lblSold" destination="xNw-yf-Z13" id="eVQ-fP-Rlo"/>
+                        <outlet property="lblStartDate" destination="zKN-s6-9Cw" id="PVL-Pw-ofj"/>
+                        <outlet property="lblTitle" destination="0Mf-D4-Edu" id="cc0-Tl-fSY"/>
                         <outlet property="scanButton" destination="u7c-2C-GxY" id="qV0-h6-PY7"/>
                     </connections>
                 </viewController>

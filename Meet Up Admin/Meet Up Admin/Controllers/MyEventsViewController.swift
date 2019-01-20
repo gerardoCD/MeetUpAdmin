@@ -11,13 +11,17 @@ import UIKit
 var myIndex = 0
 
 class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
-    
     @IBOutlet weak var tableView: UITableView!
     
-
+    
+    var events = [EventAdmin]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadDatas()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadDatas()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -25,8 +29,9 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
         performSegue(withIdentifier: "MyEventsDescription", sender: myIndex)
     }
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,10 +40,35 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MyEventsTableViewCell else{
             fatalError("The dequeued cell is not an instance of TicketTableViewCell.")
         }
-        cell.eventTitle.text = "Prueba"
-        cell.eventImage.image = UIImage(named: "peopleBack")
-        cell.accessoryType = .disclosureIndicator
+        cell.eventTitle.text = events[indexPath.row].name
+        DispatchQueue.main.async {
+            let url = URL(string:  self.events[indexPath.row].photoString!)
+            let data = try? Data(contentsOf: url!)
+            let image  = UIImage(data: data!)
+            self.events[indexPath.row].photo = image
+            cell.eventImage.image = image
+        }
+       // cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    
+    
+    
+    func loadDatas(){
+        EventAdmin.loadTickets2 { (eventsIn) in
+            self.events = eventsIn
+            self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is MyEventsDescriptionViewController
+        {
+           // let vc = segue.destination as? MyEventsDescriptionViewController
+           //vc?.codesQr = events2[sender as! Int].tickets!
+           // vc?.name = events2[sender as! Int].name
+        }
     }
 
 }
