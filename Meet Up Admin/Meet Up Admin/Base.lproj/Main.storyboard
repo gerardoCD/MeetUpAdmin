@@ -1100,6 +1100,10 @@
                                             <constraint firstItem="bkq-yP-7cx" firstAttribute="centerX" secondItem="4yp-Iq-qiC" secondAttribute="centerX" id="zes-08-5w6"/>
                                         </constraints>
                                     </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xad-gG-Nm3">
+                                        <rect key="frame" x="177" y="1242" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4yp-Iq-qiC" firstAttribute="centerX" secondItem="8yS-Zv-x9s" secondAttribute="centerX" id="6O9-ol-4UG"/>
@@ -1124,6 +1128,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1450"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="xad-gG-Nm3" id="uxw-DM-cqh"/>
                         <outlet property="createButton" destination="lwx-lt-AHA" id="ijG-oG-S87"/>
                         <outlet property="endDateLabel" destination="2wS-a7-0u0" id="Pv5-TK-dgq"/>
                         <outlet property="endDatePicker" destination="nZQ-P6-VgP" id="9AK-9t-1XU"/>

@@ -30,6 +30,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
     @IBOutlet weak var txtPlace: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     
@@ -53,6 +54,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         createButton.layer.masksToBounds = true
         createButton.isUserInteractionEnabled = false
         createButton.alpha = 0.5
+        activityIndicator.isHidden = true
         
         startDatePicker?.datePickerMode = .dateAndTime
         startDatePicker?.minimumDate = Date.calculateDate(day: 1, month: 2, year: 2019, hour: 0, minute: 0)
@@ -182,7 +184,8 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     
     
     @IBAction func CreateEvent(_ sender: UIButton) {
-       
+       activityIndicator.isHidden = false
+       activityIndicator.startAnimating()
       //  print(url!)
        if Auth.auth().currentUser != nil {
         uploadProfileImage(imgEvent.image!) { (urlAux) in
@@ -194,6 +197,8 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
                         if sucess2{
                             Event.saveEventTickets(key: key, Tickets: tickets, completion: { (sucess3) in
                                 if sucess3{
+                                    self.activityIndicator.stopAnimating()
+                                    self.activityIndicator.isHidden = false 
                                     print("Ya chingamos")
                                 }
                             })
@@ -290,7 +295,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
 
         
      
-        guard let imageData = image.jpegData(compressionQuality: 0.8) else {return}
+        guard let imageData = image.jpegData(compressionQuality: 0.4) else {return}
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpg"
