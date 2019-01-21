@@ -1182,10 +1182,10 @@
             </objects>
             <point key="canvasLocation" x="311" y="134"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabBarVC-->
         <scene sceneID="JKU-dt-xxL">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7aH-Dh-rv7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarVC" title="tabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="7aH-Dh-rv7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Sjw-r8-Ech"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x3a-La-jPY">

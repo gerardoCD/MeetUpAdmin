@@ -65,6 +65,22 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         startDatePicker?.maximumDate = Date.calculateDate(day: 31, month: 12, year: 2019, hour: 1, minute: 0)
         }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        imgEvent.image = UIImage(named: "defaultImage")
+        txtEventTitle.text = ""
+        txtCountry.text = ""
+        txtCity.text = ""
+        txtPlace.text = ""
+        txtStreet.text = ""
+        txtPrice.text = ""
+        txtDescription.text = ""
+        startDateLabel.text = "Day"
+        startTimeLabel.text = "Hour"
+        endDateLabel.text = "Day"
+        endTimeLabel.text = "Hour"
+    }
+    
+    
     
     
     @IBAction func startDateChanged(_ sender: UIDatePicker) {
@@ -201,7 +217,15 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
                                     self.activityIndicator.stopAnimating()
                                     self.activityIndicator.isHidden = true
                                     let alert = UIAlertController(title: "Congratulations", message: "You have a new event saved", preferredStyle: .alert)
-                                    alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in  self.navigationController?.popToRootViewController(animated: true)}))
+                                    alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(alert: UIAlertAction!) in
+                                       // self.navigationController?.popToRootViewController(animated: true)
+                                       let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                                        let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarVC") as! UITabBarController
+                                        appDelegate.window?.rootViewController = initialViewController
+                                        appDelegate.window?.makeKeyAndVisible()
+                                        initialViewController.selectedIndex = 0
+                                    }))
+                                        
                                     self.present(alert, animated: true)
                                 }
                             })
