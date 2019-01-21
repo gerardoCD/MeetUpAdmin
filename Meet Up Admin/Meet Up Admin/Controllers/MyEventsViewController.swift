@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 var myIndex = 0
 
 class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
@@ -17,11 +17,21 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
     var events = [EventAdmin]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDatas()
+        if Auth.auth().currentUser != nil {
+            loadDatas()
+        } else {
+            events = []
+            tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        loadDatas()
+        if Auth.auth().currentUser != nil {
+            loadDatas()
+        } else {
+            events = []
+            tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
