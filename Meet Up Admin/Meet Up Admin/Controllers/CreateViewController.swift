@@ -55,6 +55,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         createButton.isUserInteractionEnabled = false
         createButton.alpha = 0.5
         activityIndicator.isHidden = true
+        self.hideKeyboardWhenTappedAround() 
         
         startDatePicker?.datePickerMode = .dateAndTime
         startDatePicker?.minimumDate = Date.calculateDate(day: 1, month: 2, year: 2019, hour: 0, minute: 0)

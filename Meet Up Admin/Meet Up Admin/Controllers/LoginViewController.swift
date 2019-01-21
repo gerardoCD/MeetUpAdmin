@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround() 
         signInButton.layer.cornerRadius = 8.0
         signInButton.layer.masksToBounds = true
         signInButton.isUserInteractionEnabled = false

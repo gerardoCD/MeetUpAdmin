@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround() 
         signUpButton.layer.cornerRadius = 8.0
         signUpButton.layer.masksToBounds = true
         signUpButton.isUserInteractionEnabled = false
