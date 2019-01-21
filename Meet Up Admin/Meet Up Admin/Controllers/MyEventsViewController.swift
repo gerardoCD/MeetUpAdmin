@@ -65,7 +65,13 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
     {
         if segue.destination is MyEventsDescriptionViewController
         {
-           // let vc = segue.destination as? MyEventsDescriptionViewController
+           let vc = segue.destination as? MyEventsDescriptionViewController
+            vc?.title2 = events[sender as! Int].name
+            vc?.startDate = events[sender as! Int].startDate!
+            vc?.endDate = events[sender as! Int].endDate!
+            vc?.img = events[sender as! Int].photo!
+            vc?.price = events[sender as! Int].cost
+            vc?.idEvent = events[sender as! Int].id
            //vc?.codesQr = events2[sender as! Int].tickets!
            // vc?.name = events2[sender as! Int].name
         }

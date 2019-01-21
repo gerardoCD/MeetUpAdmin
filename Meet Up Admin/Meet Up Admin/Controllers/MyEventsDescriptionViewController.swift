@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 class MyEventsDescriptionViewController: UIViewController {
     
     @IBOutlet weak var scanButton: UIButton!
@@ -17,6 +17,8 @@ class MyEventsDescriptionViewController: UIViewController {
     @IBOutlet weak var lblEndDate: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblSold: UILabel!
+    var idEvent = ""
+    var tickets = [String]()
     var price = 0.0
     var title2 = ""
     var img = UIImage()
@@ -30,8 +32,38 @@ class MyEventsDescriptionViewController: UIViewController {
         imgEvent.image = img
         lblStartDate.text = startDate
         lblEndDate.text = endDate
+        lblPrice.text = String(price)
+        soldTickets(idEvent: idEvent) { (soldTickets) in
+            self.lblSold.text = String(soldTickets)
+        }
         scanButton.layer.cornerRadius = 8.0
         scanButton.layer.masksToBounds = true
     }
+    
+    
+    func soldTickets(idEvent:String,completion: @escaping (_ soldTickets: Int) -> Void){
+        loadEventsTickets(idEvent: idEvent) { (tickets) in
+            let allTickets = tickets[0].count
+            let restTickets = tickets[1].count
+            completion(allTickets - restTickets)
+        }
+      
+    }
+    
+    func loadEventsTickets(idEvent:String,completion: @escaping (_ events: [[String]]) -> Void){
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.child("eventsTickets/\(idEvent)/").observeSingleEvent(of: .value, with: { (snapshot) in
+            var events = [[String]]()
+            let eventObject = snapshot.value as? [String: AnyObject]
+            let eventAllTickets  = eventObject?["AllTickets"]
+            let eventRemainingTickets = eventObject?["RemainingTickets"]
+            events.append(eventAllTickets as! [String])
+            events.append(eventRemainingTickets as! [String])
+            completion(events)
+        })
+    
+    }
+    
     
 }
