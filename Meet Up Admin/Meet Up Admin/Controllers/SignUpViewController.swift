@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var signUpButton: UIButton!
@@ -19,6 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var meetImage: UIImageView!
     @IBOutlet weak var joinUsImage: UIImageView!
+    @IBOutlet weak var Scroll: UIScrollView!
     
     
     
@@ -39,10 +40,18 @@ class SignUpViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animate(withDuration: 1.5, delay: 0.3, options: [], animations:{
-            self.joinUsImage.center.x += self.view.bounds.width
+            self.joinUsImage.center.x += self.view.bounds.width/2.5
         },
                        completion: nil
         )
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        Scroll.setContentOffset((CGPoint(x: 0, y: 170)), animated: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        Scroll.setContentOffset((CGPoint(x: 0, y: 0)), animated: true)
     }
     
     @IBAction func emailChanged(_ sender: UITextField) {

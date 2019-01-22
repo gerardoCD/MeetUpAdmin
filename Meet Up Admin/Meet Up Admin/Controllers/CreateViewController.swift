@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class CreateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class CreateViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     
     @IBOutlet weak var createButton: UIButton!
@@ -32,6 +32,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var txtPlace: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var Scroll: UIScrollView!
     
     
     
@@ -80,7 +81,13 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         endTimeLabel.text = "Hour"
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        Scroll.setContentOffset((CGPoint(x: 0, y: 850)), animated: true)
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        Scroll.setContentOffset((CGPoint(x: 0, y: 0)), animated: true)
+    }
     
     
     @IBAction func startDateChanged(_ sender: UIDatePicker) {
