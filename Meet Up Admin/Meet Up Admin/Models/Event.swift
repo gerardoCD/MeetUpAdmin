@@ -49,7 +49,7 @@ class Event {
 
         var  databaseRef = Database.database().reference().child("events")
         let key = databaseRef.childByAutoId().key!
-        databaseRef =  Database.database().reference().child("events/\(key))")
+        databaseRef =  Database.database().reference().child("events/\(key)")
         let userObject = [
             "City" : City,
             "Country" : Country,
