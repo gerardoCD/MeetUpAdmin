@@ -1107,16 +1107,21 @@
                                             <constraint firstItem="bkq-yP-7cx" firstAttribute="centerX" secondItem="4yp-Iq-qiC" secondAttribute="centerX" id="zes-08-5w6"/>
                                         </constraints>
                                     </view>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xad-gG-Nm3">
-                                        <rect key="frame" x="177" y="1242" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xad-gG-Nm3">
+                                        <rect key="frame" x="177.66666666666666" y="1242" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="RdW-YW-MJI"/>
+                                            <constraint firstAttribute="width" constant="20" id="Ulu-0W-n2d"/>
+                                        </constraints>
                                     </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4yp-Iq-qiC" firstAttribute="centerX" secondItem="8yS-Zv-x9s" secondAttribute="centerX" id="6O9-ol-4UG"/>
+                                    <constraint firstItem="xad-gG-Nm3" firstAttribute="centerX" secondItem="8yS-Zv-x9s" secondAttribute="centerX" id="OTe-hV-LvI"/>
                                     <constraint firstAttribute="bottom" secondItem="4yp-Iq-qiC" secondAttribute="bottom" id="PH6-RF-T07"/>
                                     <constraint firstItem="4yp-Iq-qiC" firstAttribute="leading" secondItem="8yS-Zv-x9s" secondAttribute="leading" id="aaf-oP-Iov"/>
                                     <constraint firstItem="4yp-Iq-qiC" firstAttribute="top" secondItem="8yS-Zv-x9s" secondAttribute="top" id="ajD-Nf-bUp"/>
+                                    <constraint firstItem="xad-gG-Nm3" firstAttribute="top" secondItem="52a-Sx-Ve2" secondAttribute="bottom" constant="55" id="f1J-Sw-6Q3"/>
                                     <constraint firstAttribute="trailing" secondItem="4yp-Iq-qiC" secondAttribute="trailing" id="yzg-90-0Wv"/>
                                 </constraints>
                             </scrollView>
