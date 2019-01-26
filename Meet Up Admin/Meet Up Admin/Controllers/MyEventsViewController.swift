@@ -82,6 +82,7 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
             vc?.img = events[sender as! Int].photo!
             vc?.price = events[sender as! Int].cost
             vc?.idEvent = events[sender as! Int].id
+            vc?.tickets = events[sender as! Int].tickets!
            //vc?.codesQr = events2[sender as! Int].tickets!
            // vc?.name = events2[sender as! Int].name
         }

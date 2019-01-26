@@ -644,7 +644,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eoM-TJ-B4S" kind="show" id="2H3-wm-2Dm"/>
+                                    <action selector="btnScanQr:" destination="ZC8-Sj-9Fd" eventType="touchUpInside" id="2Mc-qx-8eG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sold tickets data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-yf-Z13">
@@ -706,6 +706,7 @@
                         <outlet property="lblStartDate" destination="zKN-s6-9Cw" id="PVL-Pw-ofj"/>
                         <outlet property="lblTitle" destination="0Mf-D4-Edu" id="cc0-Tl-fSY"/>
                         <outlet property="scanButton" destination="u7c-2C-GxY" id="qV0-h6-PY7"/>
+                        <segue destination="eoM-TJ-B4S" kind="show" identifier="fromEventToQr" id="qdf-p7-wRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSn-Yj-hhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

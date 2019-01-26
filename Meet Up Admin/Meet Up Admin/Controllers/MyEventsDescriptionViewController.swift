@@ -66,4 +66,22 @@ class MyEventsDescriptionViewController: UIViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is QRScanViewController
+        {
+           let vc = segue.destination as? QRScanViewController
+            vc?.tickets = tickets
+        }
+    }
+    
+    @IBAction func btnScanQr(_ sender: UIButton) {
+        performSegue(withIdentifier: "fromEventToQr", sender: nil)
+        
+    }
+    
+    
+    
+    
+    
 }

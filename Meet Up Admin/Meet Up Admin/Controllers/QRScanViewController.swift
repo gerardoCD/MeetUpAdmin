@@ -54,12 +54,23 @@ class QRScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         if metadataObjects.count != 0 {
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
                 if object.type == AVMetadataObject.ObjectType.qr {
-                    let alert = UIAlertController(title: "Your code is:", message: object.stringValue, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
-                    alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in
-                        UIPasteboard.general.string = object.stringValue
-                    }))
-                    present(alert, animated: true, completion: nil)
+                    
+                    if tickets.contains(object.stringValue!){
+                        let alert = UIAlertController(title: "Your code is:", message: "Correct", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                        alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in
+                            UIPasteboard.general.string = object.stringValue
+                        }))
+                        present(alert, animated: true, completion: nil)
+                    }else{
+                        let alert = UIAlertController(title: "Your code is:", message: "Incorrect", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                        alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in
+                            UIPasteboard.general.string = object.stringValue
+                        }))
+                        present(alert, animated: true, completion: nil)
+                    }
+              
                 }
             }
         }
