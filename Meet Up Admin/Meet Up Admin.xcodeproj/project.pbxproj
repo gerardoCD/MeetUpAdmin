@@ -10,6 +10,9 @@
 		07E2A37146FF698B73C5AC21 /* Pods_Meet_Up_AdminTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF85C92E76680210C1EB0C1 /* Pods_Meet_Up_AdminTests.framework */; };
 		4CC5227E4EFE0B1287C0A046 /* Pods_Meet_Up_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C645FACCEF4CF15147F61A38 /* Pods_Meet_Up_Admin.framework */; };
 		574CC18021F17632007B6575 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574CC17F21F17632007B6575 /* DateExtension.swift */; };
+		575DA32B21FBD781004421EB /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575DA32A21FBD781004421EB /* FirebaseDatabase.framework */; };
+		575DA32F21FBD998004421EB /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575DA32E21FBD998004421EB /* QRScanViewController.swift */; };
+		575DA33121FBF301004421EB /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 575DA33021FBF301004421EB /* square.png */; };
 		5763498121E8EF390023CD03 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763498021E8EF390023CD03 /* MyEventsViewController.swift */; };
 		5763498621E8EFEA0023CD03 /* MyEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5763498521E8EFEA0023CD03 /* MyEventsTableViewCell.swift */; };
 		57660D5B21EB07F0000E6DDE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57660D5A21EB07F0000E6DDE /* LoginViewController.swift */; };
@@ -54,6 +57,9 @@
 		45140787FA90BDB9736C379D /* Pods-Meet Up AdminUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Up AdminUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Up AdminUITests/Pods-Meet Up AdminUITests.release.xcconfig"; sourceTree = "<group>"; };
 		54335B5F9363216A15951DCE /* Pods-Meet Up AdminTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meet Up AdminTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meet Up AdminTests/Pods-Meet Up AdminTests.release.xcconfig"; sourceTree = "<group>"; };
 		574CC17F21F17632007B6575 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		575DA32A21FBD781004421EB /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		575DA32E21FBD998004421EB /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
+		575DA33021FBF301004421EB /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = SOURCE_ROOT; };
 		5763498021E8EF390023CD03 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		5763498521E8EFEA0023CD03 /* MyEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewCell.swift; sourceTree = "<group>"; };
 		57660D5A21EB07F0000E6DDE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575DA32B21FBD781004421EB /* FirebaseDatabase.framework in Frameworks */,
 				4CC5227E4EFE0B1287C0A046 /* Pods_Meet_Up_Admin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +139,7 @@
 				57660D5A21EB07F0000E6DDE /* LoginViewController.swift */,
 				57660D5C21EB080C000E6DDE /* SignUpViewController.swift */,
 				578B702C21EC2AC4008865FB /* MyEventsDescriptionViewController.swift */,
+				575DA32E21FBD998004421EB /* QRScanViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 		9F46EBABE12CCD000BF8D76A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				575DA32A21FBD781004421EB /* FirebaseDatabase.framework */,
 				C645FACCEF4CF15147F61A38 /* Pods_Meet_Up_Admin.framework */,
 				0EF85C92E76680210C1EB0C1 /* Pods_Meet_Up_AdminTests.framework */,
 				E4BCC3BAFAFE700C2708DC0B /* Pods_Meet_Up_AdminUITests.framework */,
@@ -190,6 +199,7 @@
 				C19D483721E6D259002F0793 /* Main.storyboard */,
 				C19D483A21E6D25B002F0793 /* Assets.xcassets */,
 				C19D483C21E6D25B002F0793 /* LaunchScreen.storyboard */,
+				575DA33021FBF301004421EB /* square.png */,
 				C19D483F21E6D25B002F0793 /* Info.plist */,
 				57E376DF21ED7391000C82F4 /* GoogleService-Info.plist */,
 			);
@@ -324,6 +334,7 @@
 			files = (
 				C19D483E21E6D25B002F0793 /* LaunchScreen.storyboard in Resources */,
 				57E376E021ED7391000C82F4 /* GoogleService-Info.plist in Resources */,
+				575DA33121FBF301004421EB /* square.png in Resources */,
 				C19D483B21E6D25B002F0793 /* Assets.xcassets in Resources */,
 				C19D483921E6D259002F0793 /* Main.storyboard in Resources */,
 			);
@@ -447,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575DA32F21FBD998004421EB /* QRScanViewController.swift in Sources */,
 				578B702D21EC2AC4008865FB /* MyEventsDescriptionViewController.swift in Sources */,
 				C107F9FC21ED2F4200A3F2DF /* Event.swift in Sources */,
 				C18A218E21F4F8B3002E46A6 /* EventAdmin.swift in Sources */,
@@ -635,12 +647,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DL2QH55944;
 				INFOPLIST_FILE = "Meet Up Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "UNAM.Meet-Up-Admin";
+				PRODUCT_BUNDLE_IDENTIFIER = "UNAM.Meet-Up-Admin1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -653,12 +666,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DL2QH55944;
 				INFOPLIST_FILE = "Meet Up Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "UNAM.Meet-Up-Admin";
+				PRODUCT_BUNDLE_IDENTIFIER = "UNAM.Meet-Up-Admin1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

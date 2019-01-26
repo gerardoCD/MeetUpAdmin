@@ -197,7 +197,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peopleWhite" translatesAutoresizingMaskIntoConstraints="NO" id="grX-QM-yrc">
-                                <rect key="frame" x="147" y="459" width="120.99999999999997" height="65"/>
+                                <rect key="frame" x="146.66666666666666" y="459" width="120.99999999999997" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="Nxn-DB-2kP"/>
                                     <constraint firstAttribute="height" constant="65" id="QFq-PV-tlv"/>
@@ -643,6 +643,9 @@
                                 <state key="normal" title="Scan Tickets here">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eoM-TJ-B4S" kind="show" id="2H3-wm-2Dm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sold tickets data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-yf-Z13">
                                 <rect key="frame" x="153" y="602" width="140.33333333333337" height="23"/>
@@ -708,6 +711,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSn-Yj-hhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2666.666666666667" y="888.58695652173924"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="Oq3-IC-5Cw">
+            <objects>
+                <viewController id="eoM-TJ-B4S" customClass="QRScanViewController" customModule="Meet_Up_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TOa-gn-8p3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.png" translatesAutoresizingMaskIntoConstraints="NO" id="6td-Pa-Dmo">
+                                <rect key="frame" x="20" y="190" width="374" height="356"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="356" id="CIw-h7-LSu"/>
+                                    <constraint firstAttribute="width" constant="374" id="f1r-4E-IfI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6td-Pa-Dmo" firstAttribute="centerX" secondItem="TOa-gn-8p3" secondAttribute="centerX" id="blW-7a-GWh"/>
+                            <constraint firstItem="6td-Pa-Dmo" firstAttribute="centerY" secondItem="TOa-gn-8p3" secondAttribute="centerY" id="eJx-Bn-d95"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nFz-eh-UGH"/>
+                    </view>
+                    <connections>
+                        <outlet property="square" destination="6td-Pa-Dmo" id="GvY-jl-URn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCu-to-UFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3440.579710144928" y="888.58695652173924"/>
         </scene>
         <!--Create-->
         <scene sceneID="d5u-gB-tuB">
@@ -1243,6 +1277,7 @@
         <image name="peopleBack" width="700" height="512"/>
         <image name="peopleWhite" width="700" height="512"/>
         <image name="splash2" width="960" height="688"/>
+        <image name="square.png" width="276" height="276"/>
         <namedColor name="LaunchScreenColor">
             <color red="0.094117647058823528" green="0.16078431372549021" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
