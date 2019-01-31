@@ -110,17 +110,6 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate, UI
         endTimeSend = "\(sender.date.getDayMonthYearHourMinuteSecond().hour):\(sender.date.getDayMonthYearHourMinuteSecond().minute):\(sender.date.getDayMonthYearHourMinuteSecond().second)"
     }
     
-    //IMPORTANTE CON ESTE CODIGO OBTIENES EL VALOR DE LA FECHA Y LA HORA 
-//    @IBAction func pressButton(_ sender: UIButton) {
-//        let startDate = startDateSend
-//        let startTime = startTimeSend
-//        let endDate = endDateSend
-//        let endTime = endTimeSend
-//        print(startDate)
-//        print(startTime)
-//        print(endDate)
-//        print(endTime)
-//    }
     
     
     @IBAction func titleEvent(_ sender: UITextField) {

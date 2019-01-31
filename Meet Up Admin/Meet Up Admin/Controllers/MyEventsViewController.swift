@@ -58,7 +58,7 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
             self.events[indexPath.row].photo = image
             cell.eventImage.image = image
         }
-       // cell.accessoryType = .disclosureIndicator
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
@@ -83,8 +83,6 @@ class MyEventsViewController: UIViewController, UITableViewDelegate,UITableViewD
             vc?.price = events[sender as! Int].cost
             vc?.idEvent = events[sender as! Int].id
             vc?.tickets = events[sender as! Int].tickets!
-           //vc?.codesQr = events2[sender as! Int].tickets!
-           // vc?.name = events2[sender as! Int].name
         }
     }
 

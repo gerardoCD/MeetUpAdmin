@@ -50,7 +50,7 @@ class EventAdmin {
                 let eventEndDate = eventObject?["EndDate"]
                 let eventCost = eventObject?["Price"]
                 let eventTickets = eventObject?["tickest"]
-                print(eventTickets)
+                
                 let evento = EventAdmin(id: evenId, name: eventName as! String, photo: nil, cost: eventCost as! Double, photoString: eventImageString as? String, tickets: eventTickets as? [String], startDate: evenStartDate as! String, endDate: eventEndDate as? String, availableTickets: nil)
                             events.append(evento)
                         }
