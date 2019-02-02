@@ -1,0 +1,6 @@
+framework module Pods_Meet_Up_Admin {
+  umbrella header "Pods-Meet Up Admin-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_Meet_Up_AdminTests {
+  umbrella header "Pods-Meet Up AdminTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
